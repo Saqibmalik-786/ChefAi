@@ -1,0 +1,129 @@
+
+.recipe-card {
+  background: #111111;
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.recipe-card:hover {
+  border-color: #00ff88;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.08);
+}
+
+.recipe-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.recipe-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.favorite-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #888;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.favorite-btn:hover {
+  border-color: #00ff88;
+  color: #00ff88;
+}
+
+.favorite-btn.active {
+  background: rgba(0, 255, 136, 0.12);
+  border-color: #00ff88;
+  color: #00ff88;
+}
+
+.recipe-description {
+  color: #a0a0a0;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.recipe-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #1a1a1a;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  color: #d0d0d0;
+  font-size: 0.9rem;
+}
+
+.recipe-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.recipe-section h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #00ff88;
+}
+
+.ingredients-list,
+.instructions-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #d5d5d5;
+  line-height: 1.8;
+}
+
+.ingredients-list li,
+.instructions-list li {
+  margin-bottom: 0.5rem;
+}
+
+.ingredients-list span {
+  color: #00ff88;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+
+  .recipe-card {
+    padding: 1.2rem;
+  }
+
+  .recipe-title {
+    font-size: 1.2rem;
+  }
+
+  .recipe-meta {
+    flex-direction: column;
+  }
+
+  .meta-item {
+    width: fit-content;
+  }
+}

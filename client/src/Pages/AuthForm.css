@@ -1,0 +1,250 @@
+/* ========================= */
+/* Auth Section */
+/* ========================= */
+
+.auth-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top, rgba(0, 255, 136, 0.08), transparent 30%),
+    linear-gradient(to bottom, #000000, #050505, #0a0a0a);
+}
+
+/* ========================= */
+/* Container */
+/* ========================= */
+
+.auth-container {
+  width: 100%;
+  max-width: 460px;
+  padding: 45px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #1f1f1f;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+}
+
+/* ========================= */
+/* Header */
+/* ========================= */
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.auth-header h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  background: linear-gradient(to right, #ffffff, #00ff88);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.auth-header p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ========================= */
+/* Form */
+/* ========================= */
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 18px;
+  border-radius: 16px;
+  border: 1px solid #1f2937;
+  background: rgba(255, 255, 255, 0.02);
+  transition: 0.3s ease;
+}
+
+.input-group:hover {
+  border-color: rgba(0, 255, 136, 0.4);
+}
+
+.input-group:focus-within {
+  border-color: #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
+}
+
+.input-group svg {
+  color: #00ff88;
+}
+
+.input-group input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.input-group input::placeholder {
+  color: #6b7280;
+}
+
+/* ========================= */
+/* Buttons */
+/* ========================= */
+
+.auth-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #00ff88, #00c96b);
+  color: black;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 8px;
+}
+
+.auth-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+}
+
+/* ========================= */
+/* Divider */
+/* ========================= */
+
+.divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #1f2937;
+}
+
+.divider span {
+  padding: 0 14px;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+/* ========================= */
+/* Google Button */
+/* ========================= */
+
+.google-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid #1f2937;
+  background: transparent;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.google-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+.google-btn:hover {
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.04);
+}
+
+/* ========================= */
+/* Footer */
+/* ========================= */
+
+.auth-footer {
+  margin-top: 24px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.92rem;
+}
+
+.auth-footer span {
+  color: #00ff88;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ========================= */
+/* Responsive */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .auth-section {
+    padding: 80px 6%;
+  }
+
+  .auth-container {
+    padding: 35px 28px;
+  }
+
+  .auth-header h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .auth-section {
+    padding: 70px 5%;
+  }
+
+  .auth-container {
+    padding: 30px 22px;
+    border-radius: 24px;
+  }
+
+  .auth-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .auth-header p {
+    font-size: 0.9rem;
+  }
+
+  .input-group {
+    padding: 14px 15px;
+  }
+
+  .auth-btn,
+  .google-btn {
+    padding: 13px;
+    font-size: 0.9rem;
+  }
+}
