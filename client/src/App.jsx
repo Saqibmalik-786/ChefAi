@@ -8,7 +8,7 @@ import SigninForm from './Pages/SigninForm'
 import SignupForm from './Pages/SignupForm'
 import Dashboard from './Pages/Dashboard'
 import ProtectedRoute from './components/ProtectedRoute'
-import {AuthContext} from './context/AuthContext'
+import {AuthContext} from './Context/AuthContext'
 
 function App() {
   const { user } = useContext(AuthContext);

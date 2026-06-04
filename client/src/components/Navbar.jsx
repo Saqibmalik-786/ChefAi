@@ -2,7 +2,7 @@ import { useState } from 'react'
 import {ChefHat}  from 'lucide-react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
-import {AuthContext} from '../context/AuthContext'
+import {AuthContext} from '../Context/AuthContext'
 import { useContext } from 'react'
 
 function Navbar() {
