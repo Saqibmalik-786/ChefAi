@@ -70,7 +70,7 @@ export const AuthProvider = ({ children }) => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: 'http://localhost:3000/dashboard', // adjust for production
+        redirectTo: 'https://chef-ai-692s.vercel.app/dashboard', // adjust for production
       },
     })
     if (error) console.error(error)
