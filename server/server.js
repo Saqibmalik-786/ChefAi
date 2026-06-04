@@ -5,10 +5,14 @@ import express from 'express'
 import cors from 'cors'
 import recipeRoutes from './routes/geminiRoutes.js'
 
+app.use(cors({
+  origin: process.env.FRONTEND_URL,   // allow only your Vercel frontend
+  credentials: true       // if you’re using cookies/auth
+}));
+
 const app = express()
 const PORT = process.env.PORT || 5000
 
-app.use(cors())
 app.use(express.json())
 
 app.use('/api/recipe', recipeRoutes)
