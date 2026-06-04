@@ -2,7 +2,7 @@
 
 import './AuthForm.css'
 import { useContext } from 'react'
-import { AuthContext } from '../context/AuthContext'
+import { AuthContext } from '../Context/AuthContext'
 import { Mail, Lock, User } from 'lucide-react'
 
 const Signup = () => {
