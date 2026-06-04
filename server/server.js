@@ -4,13 +4,14 @@ dotenv.config() // Load environment variables from .env file FIRST before other 
 import express from 'express'
 import cors from 'cors'
 import recipeRoutes from './routes/geminiRoutes.js'
+const app = express()
 
 app.use(cors({
   origin: process.env.FRONTEND_URL,   // allow only your Vercel frontend
   credentials: true       // if you’re using cookies/auth
 }));
 
-const app = express()
+
 const PORT = process.env.PORT || 5000
 
 app.use(express.json())
