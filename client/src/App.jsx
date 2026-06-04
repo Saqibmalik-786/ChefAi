@@ -1,6 +1,6 @@
 import './App.css'
 import { useContext } from 'react'
-import Home from './Pages/Home.JSX'
+import Home from './Pages/Home'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
