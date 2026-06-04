@@ -12,11 +12,13 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-  origin: allowedOrigins,   // allow only your Vercel frontend
-  credentials: true       // if you’re using cookies/auth
+  origin: allowedOrigins,
+ methods: ["GET", "POST", "OPTIONS"],
+ allowedHeaders: ["Content-Type"],
+  credentials: true,    // if you’re using cookies/auth
 }));
 
-
+app.options("*", cors());
 const PORT = process.env.PORT || 5000
 
 app.use(express.json())
