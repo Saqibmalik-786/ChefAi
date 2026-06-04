@@ -9,8 +9,7 @@ async (req, res) => {
   try {
 
     const { prompt } = req.body;
-    
-
+   
     const recipe =
       await getRecipe(prompt);
 

@@ -71,6 +71,7 @@ import Groq from "groq-sdk";
 const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY,
 });
+ // Check if the API key is loaded
 
 export const getRecipe = async (prompt) => {
   try {
