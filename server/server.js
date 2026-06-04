@@ -6,8 +6,13 @@ import cors from 'cors'
 import recipeRoutes from './routes/geminiRoutes.js'
 const app = express()
 
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://chefai-lemon.vercel.app"
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL,   // allow only your Vercel frontend
+  origin: allowedOrigins,   // allow only your Vercel frontend
   credentials: true       // if you’re using cookies/auth
 }));
 
