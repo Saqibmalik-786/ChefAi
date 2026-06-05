@@ -70,7 +70,7 @@
   position: relative;
 }
 
-.navbar-links a::after {
+/* .navbar-links a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -79,7 +79,7 @@
   height: 2px;
   background: #00ff88;
   transition: 0.3s ease;
-}
+} */
 
 .navbar-links a:hover {
   color: white;

@@ -46,6 +46,9 @@ function Navbar() {
             </>
           ) : (
             <>
+            <li>
+                <Link to="/" onClick={closeMenu}>Home</Link>
+            </li>
               <li>
                 <Link to="/signin" onClick={closeMenu}>
                   <button className="btn-login">Login</button>
