@@ -4,6 +4,6 @@ import { generateRecipe } from '../controllers/aiServiceController.js'
 const router = express.Router()
 
 // POST /api/recipe
-router.get('/', generateRecipe)
+router.post('/', generateRecipe)
 
 export default router

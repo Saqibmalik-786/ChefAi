@@ -10,8 +10,8 @@ async (req, res) => {
 
   try {
 
-    // const { prompt } = req.body;
-   const prompt = "I have chicken, rice, and broccoli. What can I make for dinner?";
+    const { prompt } = req.body;
+  //  const prompt = "I have chicken, rice, and broccoli. What can I make for dinner?";
     const recipe =
       await getRecipe(prompt);
 
