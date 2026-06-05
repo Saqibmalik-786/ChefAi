@@ -26,13 +26,23 @@ function Navbar() {
           <span className={isOpen ? 'open' : ''}></span>
           <span className={isOpen ? 'open' : ''}></span>
         </button>
-
+      
         <ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/recipes">Recipes</Link></li>
-          <li><Link to="/features">Features</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          {user ? (
+            <>
+            <li><Link to="/dashboard">Dashboard</Link></li>
+            </>
+          ) : (
+            <>
+           <li><Link to="/">Home</Link></li>
+          <Link to="/signin">
+              <button className="btn-login">Login</button>
+            </Link>
+            <Link to="/signup">
+              <button className="btn-signup">Sign Up</button>
+            </Link>
+            </>
+          )}
         </ul>
 
         {user ? (
