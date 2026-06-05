@@ -4,8 +4,6 @@ import { getRecipe }
 from "../services/AiService.js";
 
 export const generateRecipe =
-console.log("API Route Hit");
-console.log("Has Groq Key:", !!process.env.GROQ_API_KEY);
 async (req, res) => {
 
   try {
