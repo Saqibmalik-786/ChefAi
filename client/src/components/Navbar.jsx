@@ -1,16 +1,24 @@
-import { useState } from 'react'
-import {ChefHat}  from 'lucide-react'
+import { useContext, useState } from 'react'
+import { ChefHat } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
-import {AuthContext} from '../Context/AuthContext'
-import { useContext } from 'react'
+import { AuthContext } from '../Context/AuthContext'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-    const { user } = useContext(AuthContext)
+  const { user, signOut } = useContext(AuthContext)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
+  }
+
+  const closeMenu = () => {
+    setIsOpen(false)
+  }
+
+  const handleLogout = async () => {
+    await signOut()
+    closeMenu()
   }
 
   return (
@@ -30,36 +38,27 @@ function Navbar() {
         <ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
           {user ? (
             <>
-            <li><Link to="/dashboard">Dashboard</Link></li>
+              <li><Link to="/home" onClick={closeMenu}>Home</Link></li>
+              <li><Link to="/dashboard" onClick={closeMenu}>Dashboard</Link></li>
+              <li>
+                <button className="btn-login" onClick={handleLogout}>Logout</button>
+              </li>
             </>
           ) : (
             <>
-           <li><Link to="/">Home</Link></li>
-          <Link to="/signin">
-              <button className="btn-login">Login</button>
-            </Link>
-            <Link to="/signup">
-              <button className="btn-signup">Sign Up</button>
-            </Link>
+              <li>
+                <Link to="/signin" onClick={closeMenu}>
+                  <button className="btn-login">Login</button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/signup" onClick={closeMenu}>
+                  <button className="btn-signup">Sign Up</button>
+                </Link>
+              </li>
             </>
           )}
         </ul>
-
-        {user ? (
-          <div className="navbar-user">
-            <li><Link to="/dashboard">Dashboard</Link></li>
-            <span>Welcome, {user.email}</span>
-          </div>
-        ) : (
-          <div className="navbar-actions">
-            <Link to="/signin">
-              <button className="btn-login">Login</button>
-            </Link>
-            <Link to="/signup">
-              <button className="btn-signup">Sign Up</button>
-            </Link>
-          </div>
-        )}
       </div>
     </nav>
   )
